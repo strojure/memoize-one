@@ -41,8 +41,12 @@ Clojure library for memoization of the single value.
 
   (memoize/get-ref c)
 
-  (deref (memoize/get-ref c))                     ; Execution time mean : 7,772063 ns
+  (deref (memoize/get-ref c))                     ; Execution time mean : 7.299272 ns
   #_1654093121258
+
+  (.deref (memoize/get-ref c))                    ; Execution time mean : 6.074256 ns
+
+  (memoize/get-value c)                           ; Execution time mean : 6.343759 ns
 
   (doto (memoize/get-ref c) (deref) (memoize/evict))
   )
