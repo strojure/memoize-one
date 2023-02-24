@@ -1,5 +1,6 @@
 (ns strojure.memoize-one.core
-  "Memoization of the single value.")
+  "Memoization of the single value."
+  (:import (clojure.lang IDeref)))
 
 (set! *warn-on-reflection* true)
 
@@ -8,15 +9,15 @@
 (defprotocol LoadingCache
   "Functions for the cached computation."
 
-  (get-ref [cache]
+  (get-ref
+    ^IDeref [cache]
     "Returns cached value reference to `deref`."))
-
-;;••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
 (defprotocol MemoizedRef
   "Cache related functions for the wrapped cached reference."
 
-  (evict [ref]
+  (evict
+    [ref]
     "Invalidates this reference in the cache. Returns nil."))
 
 ;;••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
