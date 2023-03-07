@@ -15,7 +15,7 @@ Clojure library for memoization of the single value.
 ## Basic usage
 
 ```clojure
-(ns user.readme-manual
+(ns readme.manual
   "Example of using of the manual cache."
   (:require [strojure.memoize-one.core :as memoize]
             [strojure.memoize-one.manual-cache :as cache]))
@@ -54,7 +54,7 @@ Clojure library for memoization of the single value.
 ```
 
 ```clojure
-(ns user.readme-expiring
+(ns readme.expiring
   "Example of using of the expiring cache."
   (:require [strojure.memoize-one.core :as memoize]
             [strojure.memoize-one.expiring-cache :as cache]))
