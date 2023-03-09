@@ -1,4 +1,4 @@
-(defproject com.github.strojure/memoize-one "1.1.2-12-SNAPSHOT"
+(defproject com.github.strojure/memoize-one "1.1.2-15"
   :description " Clojure library for memoization of the single value."
   :url "https://github.com/strojure/memoize-one"
   :license {:name "The Unlicense" :url "https://unlicense.org"}
